@@ -1,8 +1,15 @@
 **Project Overview**
 
-This project aims to predict lung cancer presence using patient survey data by applying a Gaussian Naive Bayes classifier.
-The dataset is fetched directly from Snowflake, preprocessed using Python, and evaluated using Stratified Cross-Validation to handle class imbalance effectively.
-Medical datasets are often imbalanced, so special care is taken to ensure reliable and unbiased model evaluation.
+This project focuses on predicting lung cancer occurrence using a K-Nearest Neighbors (KNN) classifier trained on patient survey data.
+The dataset is retrieved from Snowflake, processed using Python, and evaluated using Stratified Cross-Validation to ensure robust performance on imbalanced medical data.
+KNN is a distance-based algorithm, making proper preprocessing and evaluation critical for reliable predictions.
+
+**Objective**
+
+Predict lung cancer risk using survey-based health features
+Handle class imbalance effectively
+Build a leakage-free ML pipeline
+Evaluate performance using F1-score
 
 **Tech Stack Used**
 
@@ -16,8 +23,9 @@ imbalanced-learn
 matplotlib
 
 
-**Data Leakage Prevention**
+**Why KNN Worked Well**
 
-SMOTE is applied inside a pipeline
-Ensures oversampling happens only on training folds
-Prevents artificial data from leaking into validation data
+Clear separation between classes after preprocessing
+SMOTE balanced minority class representation
+Feature scaling improved distance-based learning
+Stratified Cross-Validation ensured unbiased evaluation
